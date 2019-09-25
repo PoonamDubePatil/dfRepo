@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "CopyActivity",
+				"description": "copy data from one blob to naother blob",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
