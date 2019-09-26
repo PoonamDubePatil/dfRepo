@@ -75,14 +75,14 @@
 						},
 						"executionendtime": {
 							"value": {
-								"value": "@activity('CopyActivity').output.CopyDuration",
+								"value": "@activity('CopyActivity').output.executionDetails.duration",
 								"type": "Expression"
 							},
 							"type": "DateTime"
 						},
 						"executionstarttime": {
 							"value": {
-								"value": "@activity('CopyActivity').output.ExecutionStartTime",
+								"value": "@activity('CopyActivity').output.executionDetails.start",
 								"type": "Expression"
 							},
 							"type": "DateTime"
@@ -117,7 +117,7 @@
 						},
 						"status": {
 							"value": {
-								"value": "@activity('CopyActivity').output.status",
+								"value": "@activity('CopyActivity').output.executionDetails.status",
 								"type": "Expression"
 							},
 							"type": "String"
@@ -136,7 +136,7 @@
 					{
 						"activity": "CopyActivity",
 						"dependencyConditions": [
-							"Failed"
+							"Succeeded"
 						]
 					}
 				],
