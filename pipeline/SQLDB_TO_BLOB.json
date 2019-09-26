@@ -85,7 +85,7 @@
 								"value": "@activity('CopyActivity').output.executionDetails.start",
 								"type": "Expression"
 							},
-							"type": "DateTime"
+							"type": "Int32"
 						},
 						"pipeline": {
 							"value": {
