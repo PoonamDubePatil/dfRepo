@@ -75,14 +75,14 @@
 						},
 						"executionendtime": {
 							"value": {
-								"value": "@activity('CopyActivity').output.CopyDuration",
+								"value": "@activity('CopyActivity').output.executionDetails[0].duration",
 								"type": "Expression"
 							},
 							"type": "DateTime"
 						},
 						"executionstarttime": {
 							"value": {
-								"value": "@activity('CopyActivity').output.ExecutionStartTime",
+								"value": "@activity('CopyActivity').output.executionDetails[0].start",
 								"type": "Expression"
 							},
 							"type": "DateTime"
