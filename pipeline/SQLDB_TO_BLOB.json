@@ -75,7 +75,7 @@
 						},
 						"executionendtime": {
 							"value": {
-								"value": "@activity('CopyActivity').output.executionDetails.duration",
+								"value": "123",
 								"type": "Expression"
 							},
 							"type": "Array"
