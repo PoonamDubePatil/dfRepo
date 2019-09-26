@@ -103,7 +103,7 @@
 						},
 						"recordswritten": {
 							"value": {
-								"value": "@activity('CopyActivity').output.rowsWritten",
+								"value": "@activity('CopyActivity').output.rowsCopied",
 								"type": "Expression"
 							},
 							"type": "Int32"
