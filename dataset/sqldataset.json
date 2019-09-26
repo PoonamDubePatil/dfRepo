@@ -1,0 +1,50 @@
+{
+	"name": "sqldataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "appid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fullname",
+				"type": "varchar"
+			},
+			{
+				"name": "openeddate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "phonenumber",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "city",
+				"type": "varchar"
+			},
+			{
+				"name": "pincode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "referalcode",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sourcedata"
+		}
+	}
+}
