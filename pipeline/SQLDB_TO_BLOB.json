@@ -78,14 +78,14 @@
 								"value": "@activity('CopyActivity').output.executionDetails.duration",
 								"type": "Expression"
 							},
-							"type": "String"
+							"type": "Int32"
 						},
 						"executionstarttime": {
 							"value": {
 								"value": "@activity('CopyActivity').output.executionDetails.start",
 								"type": "Expression"
 							},
-							"type": "Int32"
+							"type": "DateTime"
 						},
 						"pipeline": {
 							"value": {
