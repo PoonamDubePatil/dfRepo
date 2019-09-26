@@ -150,7 +150,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"url": "https://prod-43.eastus.logic.azure.com:443/workflows/c44e9cc8d6654c5ba1132a66d5ea27a9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OBoXUKYZWEhFwTmPO1qgh3qpOmdiF1jlqXtwigPLDwY",
-					"method": "POST",
+					"method": "GET",
 					"body": "recievedmail"
 				}
 			}
