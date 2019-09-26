@@ -11,6 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "sourcedata.csv",
+				"folderPath": "Data",
 				"container": "staginglayer"
 			},
 			"columnDelimiter": ",",
