@@ -85,7 +85,7 @@
 								"value": "@activity('CopyActivity').output.executionDetails.start",
 								"type": "Expression"
 							},
-							"type": "Integer"
+							"type": "integer"
 						},
 						"pipeline": {
 							"value": {
