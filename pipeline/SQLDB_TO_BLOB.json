@@ -136,7 +136,7 @@
 					{
 						"activity": "CopyActivity",
 						"dependencyConditions": [
-							"Succeeded"
+							"Failed"
 						]
 					}
 				],
