@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "SQLDB_TO_BLOB",
 	"properties": {
 		"activities": [
 			{
@@ -62,7 +62,72 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[metadatasp]",
+					"storedProcedureParameters": {
+						"adfname": {
+							"value": {
+								"value": "@pipeline().DataFactory",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"executionendtime": {
+							"value": {
+								"value": "@activity('CopyActivity').output.CopyDuration",
+								"type": "Expression"
+							},
+							"type": "DateTime"
+						},
+						"executionstarttime": {
+							"value": {
+								"value": "@activity('CopyActivity').output.ExecutionStartTime",
+								"type": "Expression"
+							},
+							"type": "DateTime"
+						},
+						"pipeline": {
+							"value": {
+								"value": "@pipeline().Pipeline",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"recordsread": {
+							"value": {
+								"value": "@activity('CopyActivity').output.rowsRead",
+								"type": "Expression"
+							},
+							"type": "Int32"
+						},
+						"recordswritten": {
+							"value": {
+								"value": "@activity('CopyActivity').output.rowsWritten",
+								"type": "Expression"
+							},
+							"type": "Int32"
+						},
+						"runid": {
+							"value": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"status": {
+							"value": {
+								"value": "@activity('CopyActivity').output.status",
+								"type": "Expression"
+							},
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
 			},
 			{
 				"name": "WebActivity",
@@ -82,7 +147,11 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-43.eastus.logic.azure.com:443/workflows/c44e9cc8d6654c5ba1132a66d5ea27a9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OBoXUKYZWEhFwTmPO1qgh3qpOmdiF1jlqXtwigPLDwY",
+					"method": "GET"
+				}
 			}
 		],
 		"annotations": []
